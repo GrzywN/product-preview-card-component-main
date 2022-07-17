@@ -4,52 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <title>Frontend Mentor | Product preview card component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="./scripts/product-preview.js" type="module"></script>
-    <link rel="stylesheet" href="style.scss" />
+    <style>
+      product-preview {
+        --image-mobile: url(/src/assets/image-product-mobile.jpg);
+        --image-desktop: url(/src/assets/image-product-desktop.jpg);
+        --icon-cart: url(/src/assets/icon-cart.svg);
+
+        --bg-color-card: hsl(0, 0%, 100%);
+        --color-type: hsl(228, 12%, 48%);
+        --color-name: hsl(212, 21%, 14%);
+        --color-description: hsl(228, 12%, 48%);
+        --color-current-price: hsl(158, 36%, 37%);
+        --color-old-price: hsl(228, 12%, 48%);
+        --color-add-to-cart: hsl(0, 0%, 100%);
+        --bg-color-add-to-cart: hsl(158, 36%, 37%);
+        --color-add-to-cart-hover: hsl(0, 0%, 100%);
+        --bg-color-add-to-cart-hover: hsl(158, 42%, 18%);
+      }
+    </style>
   </head>
   <body>
-    <main class="container">
-      <div class="ProductPreview">
-        <div class="ProductPreview__Card">
-          <div class="ProductPreview__ImageWrapper">
-            <img class="ProductPreview__Image" src="./assets/image-product-mobile.jpg" alt="" />
-          </div>
-          <div class="ProductPreview__Body">
-            <h2 class="ProductPreview__Type">Perfume</h2>
-            <h3 class="ProductPreview__Name">Gabrielle Essence Eau De Parfum</h3>
-            <p class="ProductPreview__Description"
-              >A floral, solar and voluptuous interpretation composed by Olivier Polge,
-              Perfumer-Creator for the House of CHANEL.</p
-            >
-            <div class="ProductPreview__Prices">
-              <span class="ProductPreview__CurrentPrice">$149.99</span>
-              <span class="ProductPreview__OldPrice">$169.99</span>
-            </div>
-            <button class="ProductPreview__AddToCart" type="button">
-              <div class="ProductPreview__AddToCartWrapper">
-                <img class="ProductPreview__CartIcon" src="./assets/icon-cart.svg" alt="" />
-                Add to Cart
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- <product-preview></product-preview> -->
+    <main>
+      <product-preview>
+        <span slot="type">Perfume</span>
+        <span slot="name">Gabrielle Essence Eau De Parfum</span>
+        <span slot="description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator
+          for the House of CHANEL.
+        </span>
+        <span slot="current-price">$149.99</span>
+        <span slot="old-price">$169.99</span>
+        <span slot="add-to-cart">Add to Cart</span>
+      </product-preview>
     </main>
+    <script>
+      const productPreview = document.querySelector('product-preview');
+
+      productPreview.addEventListener('addToCart', () => {
+        console.log("It's possible to listen to the button event");
+      });
+    </script>
   </body>
 </html>
-
-<!-- Preview
-
-Gabrielle Essence Eau De Parfum
-
-A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-Perfumer-Creator for the House of CHANEL.
-
-$149.99
-$169.99
-
-Add to Cart -->
