@@ -1,0 +1,36 @@
+{
+  "name": "product-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "start": "npm run dev",
+    "test": "vitest --run --reporter",
+    "test:watch": "vitest --watch --reporter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrzywN/product-preview-card-component-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrzywN/product-preview-card-component-main/issues"
+  },
+  "homepage": "https://github.com/GrzywN/product-preview-card-component-main#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "parcel": "^2.6.2",
+    "vitest": "^0.18.1"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  }
+}
