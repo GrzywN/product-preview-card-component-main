@@ -27,12 +27,13 @@ class ProductPreview extends HTMLElement {
             .ProductPreview__Image {
             content: var(--image-mobile);
             max-width: 100%;
+            height: 100%;
             border-top-left-radius: 0.625rem;
             border-top-right-radius: 0.625rem;
             transition: transform 0.2s ease-in-out;
             }
             .ProductPreview__Image:hover {
-            transform: scale(1.5);
+            transform: scale(1.25) rotate(7.5deg);
             }
             .ProductPreview__Body {
             padding: 1.5rem;
@@ -200,3 +201,5 @@ class ProductPreview extends HTMLElement {
 }
 
 customElements.define("product-preview", ProductPreview);
+
+export default ProductPreview;

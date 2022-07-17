@@ -7,8 +7,10 @@
     <title>Frontend Mentor | Product preview card component</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="./scripts/product-preview.js" type="module"></script>
+    <script src="./scripts/product-preview.min.js" type="module"></script>
     <style>
+      /* How to style this Web Component with CSS custom properties (given values are defaults) */
+
       product-preview {
         --image-mobile: url(/src/assets/image-product-mobile.jpg);
         --image-desktop: url(/src/assets/image-product-desktop.jpg);
@@ -29,6 +31,8 @@
   </head>
   <body>
     <main>
+      <!-- You can change the values, use it multiple times or even change colors for each element with classes or ids and CSS styling -->
+
       <product-preview>
         <span slot="type">Perfume</span>
         <span slot="name">Gabrielle Essence Eau De Parfum</span>
@@ -42,10 +46,11 @@
       </product-preview>
     </main>
     <script>
-      const productPreview = document.querySelector('product-preview');
+      /* It's possible to listen on the addToCart event and it's triggered when user clicks the button */
 
+      const productPreview = document.querySelector('product-preview');
       productPreview.addEventListener('addToCart', () => {
-        console.log("It's possible to listen to the button event");
+        console.log('Test it by yourself!');
       });
     </script>
   </body>
