@@ -53,7 +53,7 @@ class ProductPreview extends HTMLElement {
             font-weight: 700;
             font-size: 2rem;
             line-height: 2rem;
-            letter-spacing: -0.0437rem;
+            letter-spacing: -0.67px;
             color: var(--color-name, #1c232b);
             margin-bottom: 1rem;
             }
